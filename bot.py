@@ -70,7 +70,7 @@ class MyCliet(discord.Client):
                     try:                
                         global voicechannel                    
                         voicechannel = await channel.connect()
-                        print("connectet to channel!")
+                        print("connected to channel!")
                     except TimeoutError:
                         print("\nERROR: Failed while connecting to given channel!\n")
                         await message.channel.send("SYSTEM: Failed while connecting to given channel! !")
@@ -150,7 +150,7 @@ class MyCliet(discord.Client):
             if voicechannel.is_connected():
                 await voicechannel.disconnect()
                 print("SYSTEM: disconnected bot from channel")
-                await message.channel.send("Bis dann ...")        
+                await message.channel.send("See you ...")        
 
         if message.content.startswith(".ERRORCODES"):
             await message.delete()
